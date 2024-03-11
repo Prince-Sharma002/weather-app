@@ -1,0 +1,75 @@
+.home{
+    height: 100vh;
+    background: url("../assets/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    >p{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .signout{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.container {
+    max-width: 100%;
+    height: auto;
+  }
+  .container img {
+    width: 10rem;
+    height: auto;
+  }
+
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+    font-weight: 100;
+}
+
+.continue{
+    background-color: aqua;
+    color: rgb(31, 31, 31);
+    padding: 0.2rem 3rem;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    margin: 1rem;
+    transition: all ease-in 0.1s;
+    cursor: pointer;
+    >a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.continue:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.signout{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all ease-in-out 0.1s;
+}
+
+.signout:hover{
+    background-color: black;
+    color: white;
+}
+

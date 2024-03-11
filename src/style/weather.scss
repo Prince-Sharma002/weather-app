@@ -1,0 +1,264 @@
+.weather{
+    background: url("../assets/bg3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+.App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 50%;
+    margin: 0 auto ;
+    background-color: rgba(0, 0, 0, 0.74);
+
+
+  }
+
+  .firstDiv{
+    background: url("../assets/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
+    position: relative;
+
+    >p{
+        
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: right;
+        margin: 0;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+    .posDiv{
+        font-size: 0.8rem;
+        font-weight: 200;
+        text-align: right;
+        margin: 0;
+        margin-right: 1rem;
+    }
+
+    >div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        position: absolute;
+        align-items: center;
+        bottom: 4px;
+
+        >div{
+            >p{
+                margin: 0;
+                font-size: 0.8rem;
+                font-weight: 400;
+                margin: 0;
+                margin-left: 1rem;
+            }
+        }
+        >p{
+            font-size: 2rem;
+            color: rgb(255, 156, 156);
+            text-align: right;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+    }
+    
+
+  }
+
+
+  .secDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+    >input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 2px;
+        width: 60%;
+        color: white;
+        font-size: 1rem;
+        border-bottom: 2px solid rgba(133, 133, 133, 0.548);
+    }
+    >div{
+        width: 100%;
+    }
+  }
+
+
+
+  .weatherDiv{
+      
+    width: 50%;
+    display: flex;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.548);
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    
+    justify-content: space-between;
+  }
+
+
+  .weatherDetails{
+    display: flex;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    >p{
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+  }
+
+  .locButton{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    left: 10px;
+    top: 20px;
+
+    >img{
+        filter: grayscale(100%) invert(100%) sepia(100%) saturate(500%) hue-rotate(90deg);
+    }
+  }
+
+
+//   .listenDiv{
+//     background-color: rgba(0, 0, 0, 0.74);
+//     color: white;
+//     width: 10rem;
+//     position: sticky;
+//     bottom: 2rem;
+//     right: 10px;
+//     float: right;
+//     padding: 0.5rem;
+//     word-wrap: break-word;
+//     height: 3rem;
+    
+
+//     >h3{
+//         margin: 0;
+//         font-weight: 400;
+//         font-size: 0.9rem;
+//     }
+//     >p{
+//         font-size: 0.7rem;
+//         font-weight: 500;
+//     }
+
+//     >button{
+//         background-color: transparent;
+//         border: none;
+//         outline: none;
+//         color: aqua;
+//         text-transform: uppercase;
+//         cursor: pointer;
+//         position: absolute;
+//         bottom: 5px;
+//         width: 100%;
+//         left: 5px;
+//     }
+//   }
+
+
+
+
+.listenDiv {
+    position: sticky;
+    bottom: 10px;
+    width: 100%;
+
+    >button{
+        background-color: white;
+        padding: 0.5rem;
+        border-radius: 100%;
+        border: 1px black solid;
+        cursor: pointer;
+        outline: none;
+        text-align: right;
+        position: absolute;
+        right: 10px;
+        bottom: 7px;
+        z-index: 10;
+    }
+    
+}
+  
+  .sidebar {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    left: -8000px; /* Initially off-screen to the left */
+    width: 80%;
+    height: 4rem;
+    border-radius: 10px ;
+    background-color: rgba(255, 255, 255, 0.849);
+    z-index: 1;
+    transition: left 0.3s ease; /* Smooth transition for opening/closing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    >p{
+        margin: auto 0;
+    }
+
+  }
+  
+  .sidebar.open {
+    left: 0px; /* Move sidebar to the left when open */
+  }
+  
+  .sidebar p {
+    /* Styling for the text content in the sidebar */
+    padding: 10px;
+
+    margin: 0;
+  }
+
+
+  .trans{
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .App-header{
+        width: 90%;
+    }
+
+    .listenDiv{
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+        bottom: 2rem;
+    }
+  }

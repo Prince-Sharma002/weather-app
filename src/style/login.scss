@@ -1,0 +1,83 @@
+.login{
+    background: url("../assets/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form{
+        background-color: rgba(0, 0, 0, 0.74);
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        >h1{
+            color: white;
+            font-weight: 600;
+        }
+
+        >input{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid gray;
+            color: white;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+        font-size: 1.2rem;
+
+        >button{
+            background-color: aqua;
+            color: rgb(31, 31, 31);
+            width: 30%;
+            pad: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+            font-weight: 600;
+            transition: all ease-in 0.1s;
+            cursor: pointer;
+        }
+
+        >button:hover{
+            background-color: rgb(192, 192, 192);
+        }
+
+    }
+
+}
+
+
+.signout{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all ease-in-out 0.1s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.signout:hover{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .login{
+        form{
+            width: 80%;
+            >button{
+                width: 60%;
+            }
+        }
+    }
+  }
